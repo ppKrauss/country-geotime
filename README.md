@@ -7,7 +7,7 @@ The iniciative of this repo comes from a discussion at [country-codes/issues/22]
 
 
 ## Preparation
-A good way to prepare and join CSV files is  using MongoDB. The following below shows the preparation of each column, them a mongo command join all. Some data was prepared from maps and checked by Wikidata, others are "ready for use" official data,  transformed in worksheet.
+There are many "good way" to prepare and join CSV files,  using UNIX basic tools, awk, or MongoDB. When complex "CSV+JSON data" is nencessary, MongoDB is the best option. The following below shows the preparation of each column, them a mongo command join all. Some data was prepared from maps and checked by Wikidata, others are "ready for use" official data,  transformed in worksheet.
 
 ### ID coluns
 The election of affordable contry IDs fell in choosing the most popular *ISO 3166-1* labels, the *alpha-2*  for humans and `ISO3166-1-numeric` for machines. Any other can be obtained by join with [country-codes](https://github.com/datasets/country-codes).
