@@ -1,5 +1,5 @@
 # country-geotime
-*country-geotime* [dataset](https://github.com/datasets), for geospatial and time information related to country.
+*country-geotime* [dataset](https://github.com/datasets), for geospatial information related to countries.
 
 ## Introduction
 The iniciative of this repo comes from a discussion at [country-codes/issues/22](https://github.com/datasets/country-codes/issues/22) and [datasets/registry/issues/119](https://github.com/datasets/registry/issues/119#issuecomment-142620724).
@@ -28,7 +28,7 @@ Natural Earth have free vector  map data at 1:10m, with contry polygions and con
   ) source
   GROUP BY ref_country
   ```
-This query is not fast, need somo hours to run.
+This query is not fast, need somo hours to run. See also [preparation analysis  report](https://github.com/ppKrauss/country-geotime/wiki/Country-neighbors-preparation).
 
 ### ... UTM ...
 
