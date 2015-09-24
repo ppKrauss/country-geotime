@@ -19,7 +19,7 @@ Natural Earth have free vector  map data at 1:10m, with contry polygions and con
 ```sql
   SELECT ref_country, array_agg(neighbor) AS neighbor_list
   FROM (
-    SELECT
+    SELECT DISTINCT
         m.iso_a2 AS ref_country, scan.iso_a2 AS neighbor
     FROM mundi AS m INNER JOIN mundi AS scan
          ON ST_dwithin(m.geog, scan.geog, 100)
