@@ -1,0 +1,6 @@
+cd ~/testes/country-geotime/sandbox/unicode_CLDR_tr35 
+mongoimport -d lab --drop -c ctimes_terinfo3 --type csv --file territoryInfo3.csv  --headerline
+
+join --header -a 1 -t ,  f2.txt f1.txt > j.txt
+
+mongoexport  -d lab -c  ctneig   --csv  -f ref_country,neighbor_list > ctneighbor/lixo.csv

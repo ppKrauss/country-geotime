@@ -1,0 +1,424 @@
+type,alt,territories
+aa,secondary,"DJ ET"
+ab,secondary,GE
+abr,secondary,GH
+ace,secondary,ID
+ach,secondary,UG
+ady,secondary,RU
+aeb,secondary,TN
+af,secondary,"NA ZA"
+ak,secondary,GH
+aln,secondary,XK
+am,,ET
+ar,,"AE BH DJ DZ EG EH ER IL IQ JO KM KW LB LY MA MR OM PS QA SA SD SO SY TD TN YE"
+ar,secondary,"IR SS"
+arq,secondary,DZ
+ary,secondary,MA
+arz,secondary,EG
+as,secondary,IN
+ast,secondary,ES
+av,secondary,RU
+awa,secondary,IN
+ay,,BO
+az,,AZ
+az,secondary,"IQ IR RU"
+ba,secondary,RU
+bal,secondary,"AF IR PK"
+ban,secondary,ID
+bar,secondary,AT
+bbc,secondary,ID
+bci,secondary,CI
+be,,BY
+bej,secondary,SD
+bem,secondary,ZM
+bew,secondary,ID
+bg,,BG
+bgc,secondary,IN
+bgn,secondary,PK
+bhb,secondary,IN
+bhi,secondary,IN
+bhk,secondary,PH
+bho,secondary,"IN MU NP"
+bi,,VU
+bik,secondary,PH
+bin,secondary,NG
+bjj,secondary,IN
+bjn,secondary,ID
+bjt,secondary,SN
+bm,secondary,ML
+bn,,BD
+bn,secondary,IN
+bo,secondary,CN
+bqi,secondary,IR
+brh,secondary,PK
+brx,secondary,IN
+bs,,BA
+bsc,secondary,SN
+buc,secondary,YT
+bug,secondary,ID
+bum,secondary,CM
+ca,,AD
+ca,secondary,ES
+ce,secondary,RU
+ceb,secondary,PH
+cgg,secondary,UG
+ch,,GU
+chk,secondary,FM
+ckb,secondary,"IQ IR"
+crs,secondary,SC
+cs,,CZ
+csb,secondary,PL
+cv,secondary,RU
+cy,secondary,GB
+da,,DK
+da,secondary,DE
+dcc,secondary,IN
+de,,"AT BE CH DE LI LU"
+de,secondary,"BR DK KZ NL PL US"
+dje,secondary,NE
+doi,secondary,IN
+dv,,MV
+dyo,secondary,SN
+dyu,secondary,BF
+dz,,BT
+ee,secondary,"GH TG"
+efi,secondary,NG
+el,,"CY GR"
+en,,"AG AI AS AU BB BI BM BS BW BZ CA CC CK CM CX DG DM ER FJ FK FM GB GD GG GH GI GM GU GY HK IE IM IN IO JE JM KE KI KN KY LC LR LS MG MH MP MS MT MU MW NA NF NG NR NU NZ PG PH PK PN PR PW RW SB SC SD SG SH SL SS SX SZ TC TK TO TT TV TZ UG UM US VC VG VI VU WS ZA ZM ZW"
+en,secondary,"AC AR AT BA BD BE BG BR CH CL CY CZ DE DK DZ EG ES ET FI FR GR HR HU IL IQ IT JO KZ LB LK LT MA MX MY NL PL PT RO SE SI SK TA TH TR YE"
+es,,"AR BO CL CO CR CU DO EA EC ES GQ GT HN IC MX NI PA PE PR PY SV UY VE"
+es,secondary,"AD BZ DE GI PH US"
+et,,EE
+eu,secondary,ES
+fa,,"AF IR"
+fa,secondary,PK
+fan,secondary,GQ
+ff,secondary,"GN SN"
+ffm,secondary,ML
+fi,,FI
+fi,secondary,SE
+fil,,PH
+fil,secondary,US
+fj,,FJ
+fo,,FO
+fon,secondary,BJ
+fr,,"BE BF BI BJ BL CA CD CF CG CH CI CM DJ DZ FR GA GF GN GP GQ HT KM LU MA MC MF MG ML MQ MU NC NE PF PM RE RW SC SN SY TD TG TN VU WF YT"
+fr,secondary,"DE IT NL TF US"
+fud,secondary,WF
+fuq,secondary,NE
+fuv,secondary,NG
+fy,secondary,NL
+ga,,IE
+ga,secondary,GB
+gaa,secondary,GH
+gan,secondary,CN
+gbm,secondary,IN
+gcr,secondary,GF
+gd,secondary,GB
+gil,,KI
+gl,secondary,ES
+glk,secondary,IR
+gn,,PY
+gom,secondary,IN
+gon,secondary,IN
+gor,secondary,ID
+gsw,,"CH LI"
+gu,secondary,IN
+guz,secondary,KE
+gv,,IM
+ha,secondary,"NE NG"
+hak,secondary,CN
+haw,secondary,US
+haz,secondary,AF
+he,,IL
+hi,,IN
+hi,secondary,FJ
+hif,,FJ
+hil,secondary,PH
+hne,secondary,IN
+hno,secondary,PK
+ho,,PG
+hoc,secondary,IN
+hoj,secondary,IN
+hr,,"BA HR"
+hr,secondary,"AT RS"
+hsn,secondary,CN
+ht,,HT
+hu,,HU
+hu,secondary,"AT RO RS"
+hy,,AM
+hy,secondary,RU
+ibb,secondary,NG
+id,,ID
+ig,secondary,NG
+ii,secondary,CN
+ikt,secondary,CA
+ilo,secondary,PH
+inh,secondary,RU
+is,,IS
+it,,"CH IT SM"
+it,secondary,"DE FR HR US VA"
+iu,secondary,CA
+ja,,JP
+jam,secondary,JM
+jv,secondary,ID
+ka,,GE
+kab,secondary,DZ
+kam,secondary,KE
+kbd,secondary,RU
+kde,secondary,TZ
+kea,secondary,CV
+kfy,secondary,IN
+kg,secondary,CD
+kha,secondary,IN
+khn,secondary,IN
+ki,secondary,KE
+kj,secondary,NA
+kk,,KZ
+kk,secondary,CN
+kl,,GL
+kl,secondary,DK
+kln,secondary,KE
+km,,KH
+kmb,secondary,AO
+kn,secondary,IN
+knf,secondary,SN
+ko,,"KP KR"
+ko,secondary,CN
+koi,secondary,RU
+kok,secondary,IN
+krc,secondary,RU
+kri,secondary,SL
+kru,secondary,IN
+ks,secondary,IN
+ku,secondary,"SY TR"
+kum,secondary,RU
+kv,secondary,RU
+kxm,secondary,TH
+ky,,KG
+la,secondary,VA
+lah,secondary,PK
+laj,secondary,UG
+lb,,LU
+lbe,secondary,RU
+lez,secondary,RU
+lg,secondary,UG
+ljp,secondary,ID
+lmn,secondary,IN
+ln,secondary,CD
+lo,,LA
+lrc,secondary,IR
+lt,,LT
+lt,secondary,PL
+lu,secondary,CD
+lua,secondary,CD
+luo,secondary,KE
+luy,secondary,KE
+luz,secondary,IR
+lv,,LV
+mad,secondary,ID
+mag,secondary,IN
+mai,secondary,"IN NP"
+mak,secondary,ID
+man,secondary,"GM GN"
+mdf,secondary,RU
+mdh,secondary,PH
+men,secondary,SL
+mer,secondary,KE
+mey,secondary,SN
+mfa,secondary,TH
+mfe,secondary,MU
+mfv,secondary,SN
+mg,,MG
+mgh,secondary,MZ
+mh,,MH
+mi,,NZ
+min,secondary,ID
+mk,,MK
+ml,secondary,IN
+mn,,MN
+mn,secondary,CN
+mni,secondary,IN
+mos,secondary,BF
+mr,secondary,IN
+ms,,"BN MY SG"
+ms,secondary,"CC ID"
+mt,,MT
+mtr,secondary,IN
+mwr,secondary,IN
+my,,MM
+myv,secondary,RU
+myx,secondary,UG
+mzn,secondary,IR
+na,,NR
+nan,secondary,CN
+nb,,"NO SJ"
+nd,,ZW
+ndc,secondary,MZ
+nds,secondary,"DE NL"
+ne,,NP
+ne,secondary,IN
+new,secondary,NP
+ng,secondary,NA
+ngl,secondary,MZ
+niu,,NU
+nl,,"AW BE BQ CW NL SR SX"
+nl,secondary,DE
+nn,,NO
+nod,secondary,TH
+noe,secondary,IN
+nr,secondary,ZA
+nso,secondary,ZA
+ny,,MW
+ny,secondary,ZM
+nym,secondary,TZ
+nyn,secondary,UG
+oc,secondary,FR
+om,secondary,ET
+or,secondary,IN
+os,secondary,GE
+pa,secondary,"IN PK"
+pag,secondary,PH
+pam,secondary,PH
+pap,,"AW CW"
+pap,secondary,BQ
+pau,,PW
+pcm,secondary,NG
+pl,,PL
+pl,secondary,UA
+pon,secondary,FM
+ps,,AF
+ps,secondary,PK
+pt,,"AO BR CV GW MO MZ PT ST TL"
+qu,,"BO EC PE"
+quc,secondary,GT
+raj,secondary,IN
+rcf,secondary,RE
+rej,secondary,ID
+rif,secondary,MA
+rkt,secondary,"BD IN"
+rm,secondary,CH
+rmt,secondary,IR
+rn,,BI
+ro,,"MD RO"
+ro,secondary,RS
+ru,,"BY KG KZ RU UA"
+ru,secondary,"DE EE LV SJ UZ"
+rw,,RW
+sa,secondary,IN
+sah,secondary,RU
+sas,secondary,ID
+sat,secondary,IN
+sav,secondary,SN
+sc,secondary,IT
+sck,secondary,IN
+sco,secondary,GB
+sd,secondary,"IN PK"
+sdh,secondary,IR
+se,secondary,NO
+seh,secondary,MZ
+sg,,CF
+shi,secondary,MA
+shn,secondary,MM
+si,,LK
+sid,secondary,ET
+sk,,SK
+sk,secondary,RS
+skr,secondary,PK
+sl,,SI
+sl,secondary,AT
+sm,,"AS WS"
+sn,,ZW
+snf,secondary,SN
+so,,SO
+so,secondary,"DJ ET"
+sou,secondary,TH
+sq,,"AL XK"
+sq,secondary,"MK RS"
+sr,,"BA ME RS XK"
+srn,secondary,SR
+srr,secondary,SN
+ss,,SZ
+ss,secondary,ZA
+st,,LS
+st,secondary,ZA
+su,secondary,ID
+suk,secondary,TZ
+sus,secondary,GN
+sv,,"AX FI SE"
+sw,,"KE TZ UG"
+sw,secondary,CD
+swb,secondary,YT
+swc,secondary,CD
+swv,secondary,IN
+syl,secondary,BD
+ta,,"LK SG"
+ta,secondary,"IN MY"
+tcy,secondary,IN
+te,secondary,IN
+tem,secondary,SL
+teo,secondary,UG
+tet,,TL
+tg,,TJ
+th,,TH
+ti,,ER
+ti,secondary,ET
+tig,secondary,ER
+tiv,secondary,NG
+tk,,TM
+tk,secondary,"AF IR"
+tkl,,TK
+tmh,secondary,NE
+tn,,BW
+tn,secondary,ZA
+tnr,secondary,SN
+to,,TO
+tpi,,PG
+tr,,"CY TR"
+tr,secondary,DE
+ts,secondary,"MZ ZA"
+tsg,secondary,PH
+tt,secondary,RU
+tts,secondary,TH
+tum,secondary,MW
+tvl,,TV
+ty,,PF
+tyv,secondary,RU
+tzm,,MA
+udm,secondary,RU
+ug,secondary,CN
+uk,,UA
+uk,secondary,RS
+umb,secondary,AO
+und,secondary,"AQ BV CP GS HM"
+unr,secondary,IN
+ur,,PK
+ur,secondary,IN
+uz,,UZ
+uz,secondary,AF
+ve,secondary,ZA
+vi,,VN
+vi,secondary,US
+vls,secondary,BE
+vmf,secondary,DE
+vmw,secondary,MZ
+wal,secondary,ET
+war,secondary,PH
+wbq,secondary,IN
+wbr,secondary,IN
+wls,secondary,WF
+wni,,KM
+wo,,SN
+wtm,secondary,IN
+wuu,secondary,CN
+xh,secondary,ZA
+xnr,secondary,IN
+xog,secondary,UG
+yo,,NG
+za,secondary,CN
+zdj,,KM
+zgh,secondary,MA
+zh,,"CN HK MO SG TW"
+zh,secondary,"ID MY TH US"
+zu,secondary,ZA
+zza,secondary,TR

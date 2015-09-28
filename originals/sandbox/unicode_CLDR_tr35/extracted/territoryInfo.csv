@@ -1,0 +1,258 @@
+country,population,langs_official,langs_other
+AC,940,,en
+AD,85458,ca,"es fr"
+AE,5628810,ar,"ml ps bal fa"
+AF,31822800,"fa ps","haz uz_Arab tk_Latn prd"
+AG,91295,en,pt
+AI,16086,en,
+AL,3020210,sq,el
+AM,3060630,hy,ku_Latn
+AO,19088100,pt,"umb kmb"
+AQ,300,,und
+AR,43024400,es,en
+AS,54517,sm,en
+AT,8223060,de,"bar en hr"
+AU,22507600,,"en zh_Hant it"
+AW,110663,"nl pap",en
+AX,26200,sv,
+AZ,9686210,"az_Latn az_Cyrl",tly_Latn
+BA,3871640,"bs_Cyrl bs_Latn hr sr_Cyrl sr_Latn",en
+BB,289680,en,
+BD,166281000,bn,"en rkt syl"
+BE,10449400,"nl fr de","en vls wa"
+BF,18365100,fr,"mos dyu"
+BG,6924720,bg,"en tr"
+BH,1314090,ar,ml
+BI,10395900,"rn fr en",
+BJ,10160600,fr,"fon yo"
+BL,7267,fr,
+BM,69839,en,
+BN,422675,"ms_Latn ms_Arab","zh_Hant en"
+BO,10631500,"es qu ay",
+BQ,20000,nl,pap
+BR,202657000,pt,en
+BS,321834,en,
+BT,733643,dz,"ne tsj en lep"
+BV,1,,und
+BW,2155780,"en tn",
+BY,9608060,"be ru",
+BZ,340844,en,es
+CA,34834800,"en fr","it de"
+CC,596,,"ms_Arab en"
+CD,77433700,fr,"sw lua swc ln lu kg"
+CF,5277960,"fr sg",
+CG,4662450,fr,ln
+CH,8061520,"de fr it","gsw en lmo"
+CI,22848900,fr,"bci sef dnj"
+CK,10134,en,
+CL,17363900,es,"en arn"
+CM,23130700,"fr en","bum ff ewo ybb bbj nnh bkm bas bax byv mua"
+CN,1355690000,zh_Hans,"wuu hsn hak nan gan"
+CO,46245300,es,
+CP,1,,und
+CR,4755230,es,
+CU,11047300,es,
+CV,538535,pt,kea
+CW,146836,nl,"pap es"
+CX,1530,en,
+CY,1172460,"el tr",en
+CZ,10627400,cs,en
+DE,80996700,de,"en fr nds nl it es ru vmf tr da swg"
+DG,500,,en
+DJ,810179,"ar fr","aa so"
+DK,5569080,da,en
+DM,73449,en,
+DO,10349700,es,
+DZ,38813700,"ar fr","arq kab en"
+EA,150000,es,
+EC,15654400,"es qu",qug
+EE,1257920,et,"ru vro"
+EG,86895100,ar,"arz en"
+EH,554795,ar,
+ER,6380800,"en ar","ti tig aa ssy byn"
+ES,47737900,es,"en ca gl eu ast"
+ET,96633500,am,"en om so ti sid wal aa"
+FI,5268800,"fi sv",en
+FJ,903207,"en hif_Latn fj",hi
+FK,3361,en,
+FM,105681,en,"chk pon kos yap uli"
+FO,49947,fo,
+FR,66259000,fr,"en oc it pt pcd"
+GA,1672600,fr,puu
+GB,63743000,en,sco
+GD,110152,en,
+GE,4935880,ka,"xmf ru hy ab os"
+GF,199509,fr,"gcr zh_Hant"
+GG,65849,en,
+GH,25758100,en,"ak ee abr gur ada gaa nzi"
+GI,29185,en,es
+GL,57728,kl,da
+GM,1925530,en,man_Latn
+GN,11474400,fr,"ff man_Nkoo sus nqo kpe"
+GP,452776,fr,
+GQ,722254,"es fr","fan bvb"
+GR,10775600,el,"en pnt_Grek mk tr"
+GS,20,,und
+GT,14647100,es,quc
+GU,161001,ch,en
+GW,1693400,pt,
+GY,735554,en,
+HK,7112690,"zh_Hant en",zh_Hans
+HM,1,,und
+HN,8598560,es,
+HR,4470530,hr,"en it"
+HT,9996730,"ht fr",
+HU,9919130,hu,"en de"
+IC,2098590,es,
+ID,253610000,id,"jv su mad ms_Arab min bew ban bug bjn ace"
+IE,4832770,"en ga",
+IL,7821850,"he ar","en ru ro yi pl lad hu"
+IM,86866,"en gv",
+IN,1236340000,"hi en","bn te mr ta ur gu kn ml or pa_Guru bho awa as bgc mag mwr mai hne"
+IO,3500,en,
+IQ,32585700,ar,"en ckb az_Arab"
+IR,80840700,fa,"az_Arab mzn glk ckb sdh tk_Latn lrc ar bal rmt bqi luz"
+IS,317351,is,
+IT,61680100,it,"en fr sc de vec"
+JE,96513,en,
+JM,2930050,en,jam
+JO,7930490,ar,en
+JP,127103000,ja,
+KE,45010100,"sw en","ki luy luo kam kln guz mer mas ebu so"
+KG,5604210,"ky_Cyrl ru",
+KH,15458300,km,cja
+KI,104488,"en gil",
+KM,766865,"ar fr zdj wni",
+KN,51538,en,
+KP,24851600,ko,
+KR,49040000,ko,
+KW,2742710,ar,
+KY,54914,en,
+KZ,17948800,"ru kk_Cyrl","en de ug_Cyrl"
+LA,6803700,lo,kjg
+LB,5882560,ar,"en hy ku_Arab"
+LC,163362,en,
+LI,37313,de,"gsw wae"
+LK,21866400,"si ta",en
+LR,4092310,en,"kpe vai_Vaii"
+LS,1942010,"st en","zu ss"
+LT,3505740,lt,"en ru"
+LU,520672,"fr lb de",
+LV,2165170,lv,"ru ltg"
+LY,6244170,ar,
+MA,32987200,"ar tzm_Latn","ary zgh fr en shi_Latn shi_Tfng rif_Latn rif_Tfng"
+MC,30508,fr,
+MD,3583290,ro,"uk bg gag ru"
+ME,650036,sr_Latn,"sq sr_Cyrl"
+MF,31530,fr,
+MG,23201900,"mg fr en",
+MH,70983,"en mh",
+MK,2091720,mk,"sq tr"
+ML,16455900,fr,"bm_Latn ffm snk mwk ses tmh bm_Nkoo khq dtm kao"
+MM,55746300,my,"shn kac mnw"
+MN,2953190,mn_Cyrl,"kk_Arab zh_Hans"
+MO,587914,"zh_Hant pt","zh_Hans en"
+MP,51483,,"en ch"
+MQ,436131,fr,
+MR,3516810,ar,"fr ff"
+MS,5215,en,
+MT,412655,"mt en",
+MU,1331160,"en fr","mfe bho ur ta"
+MV,393595,dv,
+MW,17377500,"en ny",tum
+MX,120287000,,"es en"
+MY,30073400,ms_Latn,"en zh_Hant ta iba jv zmi"
+MZ,24692100,pt,"vmw ndc ts ngl seh mgh rng ny yao"
+NA,2198410,en,"af kj ng naq hz"
+NC,267840,fr,
+NE,17466200,fr,"ha_Latn dje fuq tmh"
+NF,2210,en,
+NG,177156000,"en yo","pcm ha_Latn ig fuv tiv efi ibb ha_Arab"
+NI,5848640,es,
+NL,16877400,nl,"en de fr nds li fy gos id zea rif_Latn tr"
+NO,5147790,"nb nn",se
+NP,30987000,ne,"mai bho new jml en taj awa thl bap tdg thr mgp lif_Deva thq"
+NR,9488,"en na",
+NU,1190,"en niu",
+NZ,4401920,mi,en
+OM,3219780,ar,bal
+PA,3608430,es,en
+PE,30147900,"es qu",ay
+PF,280026,"fr ty",zh_Hant
+PG,6552730,"tpi en ho",
+PH,107668000,"en fil","es ceb ilo hil bik war bhk pam pag mdh tsg"
+PK,196174000,"ur en","pa_Arab lah ps sd_Arab skr bal brh hno"
+PL,38346300,pl,"en szl"
+PM,5716,fr,en
+PN,48,en,
+PR,3620900,es,en
+PS,4547430,ar,
+PT,10813800,pt,en
+PW,21186,"pau en",
+PY,6703860,"gn es",de
+QA,2123160,ar,fa
+RE,787584,fr,"rcf ta"
+RO,21729900,ro,"en hu"
+RS,7209760,"sr_Cyrl sr_Latn","sq hu ro"
+RU,142470000,ru,"tt ba cv"
+RW,12337100,"rw en fr",
+SA,27346000,ar,
+SB,609883,en,rug
+SC,91650,"fr en",crs
+SD,35482200,"ar en","bej fvr ha_Arab"
+SE,9723810,sv,"en fi"
+SG,5567300,"en zh_Hans ms_Latn ta",
+SH,7776,en,
+SI,1988290,sl,en
+SJ,1872,nb,ru
+SK,5443580,sk,"en hu uk"
+SL,5743730,en,"kri men tem"
+SM,32742,it,
+SN,13635900,fr,"wo ff srr dyo sav"
+SO,10428000,"so ar",sw
+SR,573311,nl,"srn zh_Hant"
+SS,11562700,en,"ar nus"
+ST,190428,pt,
+SV,6125510,es,
+SX,39689,"en nl","es vic"
+SY,17951600,"ar fr","ku_Latn hy"
+SZ,1419620,"en ss","zu ts"
+TA,275,,en
+TC,49070,en,
+TD,11412100,"fr ar",
+TF,140,,fr
+TG,7351370,fr,ee
+TH,67741400,th,"en tts nod sou mfa zh_Hant kxm"
+TJ,8051510,tg_Cyrl,ru
+TK,1337,"en tkl",
+TL,1201540,"pt tet",
+TM,5171940,tk_Latn,"ru uz_Latn"
+TN,10937500,"ar fr",aeb
+TO,106440,"to en",
+TR,81619400,tr,"en ku_Latn zza"
+TT,1223920,en,
+TV,10782,"tvl en",
+TW,23359900,zh_Hant,
+TZ,49639100,"sw en","suk nym kde bez ksb mas mgy asa"
+UA,44291400,uk,"ru pl yi rue"
+UG,35918900,"sw en","lg nyn cgg xog teo laj ach myx rw ttj"
+UM,316,,en
+US,318892000,,"en es"
+UY,3332970,es,
+UZ,28929700,"uz_Latn uz_Cyrl","ru kaa"
+VA,842,,"it la"
+VC,102918,en,
+VE,28868500,es,
+VG,32680,en,
+VI,104170,,en
+VN,93421800,vi,zh_Hant
+VU,266937,"bi en fr",
+WF,15561,fr,"wls fud"
+WS,196628,"sm en",
+XK,1859200,"sq sr_Cyrl sr_Latn",aln
+YE,26053000,ar,en
+YT,194000,fr,"swb buc sw"
+ZA,48375600,en,"zu xh af nso tn st ts ss ve hi nr"
+ZM,14638500,en,"bem ny loz"
+ZW,13771700,"sn en nd","mxc ndc kck ny"
+ZZ,0,,

@@ -1,0 +1,92 @@
+{
+  "name": "country-geotime",
+  "title": "Datasets for geospatial information related to countries, draft1",
+  "sources": [
+    {
+      "name":"Many..."
+    }
+  ],
+  "licenses": [
+	  {
+		  "id": "odc-pddl",
+		  "name": "Public Domain Dedication and License",
+		  "version": "1.0",
+		  "url": "http://opendatacommons.org/licenses/pddl/1.0/"
+	  }
+	],
+  "resources": [
+    {
+      "name": "contry-geotime",
+      "path": "data/contry-geotime.csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "iso_alpha2",
+            "description":"Alpha-2 codes from ISO 3166-1",
+            "type": "string"
+          },
+          {
+            "name": "iso_numeric",
+            "description":"Numeric codes from ISO 3166-1 (synonymous with UN Statistics M49 Codes)",
+            "type": "integer"
+          },
+
+          {
+            "name": "name",
+            "description":"Country's official English short name",
+            "type": "string"
+          },
+          {
+            "name": "population",
+            "description":"Most recent estimative of number of people inhabiting the country; see tag languagePopulation and https://www.wikidata.org/wiki/Property:P1082",
+            "type": "string"
+          },
+          {
+            "name": "neighbors",
+            "description":"List of countries (designed by its iso-alpha2) that meet borders, see  https://www.wikidata.org/wiki/Property:P47",
+            "type": "string"
+          },
+          {
+            "name": "langs_official",
+            "description":"List of official languages (by iso lang code), as unicode_CLDR_tr35 in ",
+            "type": "string"
+          },
+          {
+            "name": "langs_sec",
+            "description":"List of secondary languages (by iso lang code), as unicode_CLDR_tr35 ",
+            "type": "string"
+          },
+          {
+            "name": "DST_legal",
+            "description":"Legal Time (...)",
+            "type": "string"
+          }
+	]
+      }
+    },
+    {
+      "name": "territoryContainment",
+      "path": "data/territoryContainment.csv",
+      "mediatype": "text/csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "type",
+            "description":"ISO's 2 letter alpha-2 code, or numeric, of geographic area that contains many contries",
+            "type": "string"
+          },
+          {
+            "name": "contains",
+            "description":"List of contries (iso-alpha2 codes) or ther territories of this table. See territoryContainment XML tag of supplementalData, unicode_CLDR_tr35.",
+            "type": "string"
+          }
+	]
+      }
+    }
+  ],
+  "maintainers":[{
+    "name": "PPKrauss",
+    "web": "https://github.com/ppkrauss"
+  }]
+}
