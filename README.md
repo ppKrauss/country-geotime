@@ -50,5 +50,5 @@ Unicode, Inc. CLDR data files are interpreted according to the LDML specificatio
 
 ## Credits
 
-Thanks to @sumariva in prepare and review all PostGIS scripts, and generate results after hours of CPU. 
+Thanks to [@sumariva](https://github.com/sumariva) in prepare and review all PostGIS scripts, and generate results after hours of CPU. 
 
