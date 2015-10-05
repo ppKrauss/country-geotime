@@ -48,3 +48,7 @@ Unicode, Inc. CLDR data files are interpreted according to the LDML specificatio
 
 ... language ...  Wikidata/Wikipedia conventions for "simple and useful data"... 
 
+## Credits
+
+Thanks to @sumariva in prepare and review all PostGIS scripts, and generate results after hours of CPU. 
+
