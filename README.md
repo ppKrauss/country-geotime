@@ -27,24 +27,61 @@ The most popular label is the `alpha-2`  (for humans), and, for other uses,  `nu
 
 As listed in [peakbagger's depentab](http://peakbagger.com/pbgeog/countries.aspx#depentab) there are two methodologis to labeling contries .... 
 
-```shell
-# strange URL, with "double http",
-wget -c http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_admin_0_map_units.zip
-unzip ne_10m_admin_0_countries.zip
-shp2pgsql  -s 4326 ne_10m_admin_0_map_units public.mundi | psql -h localhost -U postgres sandbox
-psql -h localhost -U postgres sandbox -c "
-  CREATE TABLE neighbors AS
+
+  CREATE TABLE neighbors2 AS
   SELECT ref_country, array_agg(neighbor) AS neighbor_list
   FROM (
     SELECT DISTINCT
         m.iso_a2 AS ref_country, scan.iso_a2 AS neighbor
     FROM mundi AS m INNER JOIN mundi AS scan
          ON ST_dwithin(m.geom, scan.geom, 0.00001) -- SRID4326 degree metric
-    WHERE m.gid!=scan.gid AND m.iso_a2!='-99' AND  scan.iso_a2!='-99' -- no ocean
+    WHERE m.gid>scan.gid AND m.iso_a2!='-99' AND  scan.iso_a2!='-99' -- no ocean
     ORDER BY 1, 2
   ) source
   GROUP BY ref_country;
+
+
+
+```shell
+# # # # # # #
+# get secondary mundi map, witn only all ~240 countries (237 rows)
+
+wget -c http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_admin_0_countries.zip
+shp2pgsql  -s 4326 ne_10m_admin_0_countries public.countries | psql -h localhost -U postgres sandbox
+
+http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_admin_0_countries.zip
+
+# # # # # # #
+# get main mundi map, witn only ~190 "country units"
+mkdir sandbox
+cd sandbox
+wget -c http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_admin_0_map_units.zip
+unzip ne_10m_admin_0_map_units.zip
+shp2pgsql  -s 4326 ne_10m_admin_0_map_units public.mundi | psql -h localhost -U postgres sandbox
+rm *.*
+wget -c http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_admin_0_countries.zip
+unzip ne_10m_admin_0_countries.zip
+shp2pgsql  -s 4326 ne_10m_admin_0_countries public.countries | psql -h localhost -U postgres sandbox
+rm *.*
+
+psql -h localhost -U postgres sandbox -c "
+  CREATE TABLE neighbors AS
+  WITH mundi_aug AS (
+    SELECT iso_a2, geom FROM countries WHERE iso_a2 NOT IN (SELECT iso_a2 FROM mundi)
+    UNION 
+    SELECT iso_a2, geom FROM countries WHERE iso_a2!='-99' -- no ocean
+  ) SELECT ref_country, array_agg(neighbor) AS neighbor_list
+    FROM (
+	    SELECT DISTINCT
+		m.iso_a2 AS ref_country, scan.iso_a2 AS neighbor
+	    FROM mundi_aug AS m INNER JOIN mundi_aug AS scan
+		 ON ST_dwithin(m.geom, scan.geom, 0.00001) -- SRID4326 degree metric
+	    WHERE m.iso_a2!=scan.iso_a2 -- not optimized, scans geom twice
+	    ORDER BY 1, 2
+    ) source
+    GROUP BY ref_country;
 "
+
 # make a report as COPY CSV or 
 psql -h localhost -U postgres sandbox -c "select *, array_length(neighbor_list,1) list_len from neighbors"
 ```
