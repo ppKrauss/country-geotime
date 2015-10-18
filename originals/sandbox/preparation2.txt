@@ -1,6 +1,27 @@
+
+
+var LeftJoin = function (resultCollect,collect1,collect2,pkname,fields) {
+	resultCollect.drop();
+	collect1.find().forEach(function(doc1) {
+		var pkval = doc1[pkname];
+		var cond = {};
+		cond[pkname] = pkval;
+		var doc2 = collect2.findOne( cond );
+		fields.forEach(function (f){ doc1[f]=doc2? doc2[f]: null; });
+		resultCollect.save(doc1);
+	}) // each doc1
+}; // func
+
+
+/// OR
+
+
 cd ~/testes/country-geotime/sandbox/unicode_CLDR_tr35 
 mongoimport -d lab --drop -c ctimes_terinfo3 --type csv --file territoryInfo3.csv  --headerline
 
 join --header -a 1 -t ,  f2.txt f1.txt > j.txt
 
-mongoexport  -d lab -c  ctneig   --csv  -f ref_country,neighbor_list > ctneighbor/lixo.csv
+mongoexport  -d lab -c  ctneig   --csv  -f ref_country,neighbor_list > ctneighbor.csv
+
+join --header -a 1 -t ,  ../sandbox/joinBy.csv   ../drafts/neighbor_list-try2-normalized.csv > j.txt
+
