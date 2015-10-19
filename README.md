@@ -102,7 +102,7 @@ psql -h localhost -U postgres sandbox -c "SELECT *, array_length(utm_codes,1) AS
 Each country is under one or more cells of the UTM-grid, that is the main standard to describe contry territory in a local-planar projection. See [Utm-zones.jpg](https://upload.wikimedia.org/wikipedia/commons/e/ed/Utm-zones.jpg).
 
 ### Time references 
-For usual source, see ["Time zones" at baruch.cuny.edu](https://www.baruch.cuny.edu/confluence/display/geoportal/ESRI+International+Data).
+For usual source, translated as [`time_zones.csv`](https://github.com/ppKrauss/country-geotime/blob/master/data/time_zones.csv), see ["Time zones" at baruch.cuny.edu](https://www.baruch.cuny.edu/confluence/display/geoportal/ESRI+International+Data).
 
 Each country have its standard official UTC hour fuses (column FUSES), corresponding to an official approximation to the exact UTC fuses tha cross the country area; and have an extetion to these fuses, the "legal time" (column `DST_legal`) corresponding to the....
 
