@@ -25,32 +25,27 @@ The most popular label is the `alpha-2`  (for humans), and, for other uses,  `nu
 
 ### Country neighbors
 
-As listed in [peakbagger's depentab](http://peakbagger.com/pbgeog/countries.aspx#depentab) there are two methodologis to labeling contries .... 
+As showed in [peakbagger's depentab](http://peakbagger.com/pbgeog/countries.aspx#depentab), *"(...) there are therefore 254 'countries' in the world: 194 independent nation-states, 55 dependencies, Antarctica, and 4 other areas"*, so a map of units for the 194, and a "full map" for join all other contries. Here, using  [Natural Earth  vector maps](http://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-admin-0-countries/) of each methodology.
 
-
-  CREATE TABLE neighbors2 AS
-  SELECT ref_country, array_agg(neighbor) AS neighbor_list
-  FROM (
-    SELECT DISTINCT
-        m.iso_a2 AS ref_country, scan.iso_a2 AS neighbor
-    FROM mundi AS m INNER JOIN mundi AS scan
-         ON ST_dwithin(m.geom, scan.geom, 0.00001) -- SRID4326 degree metric
-    WHERE m.gid>scan.gid AND m.iso_a2!='-99' AND  scan.iso_a2!='-99' -- no ocean
-    ORDER BY 1, 2
-  ) source
-  GROUP BY ref_country;
-
-
+```sql
+  CREATE TABLE neighbors AS
+  WITH mundi_aug AS (
+    SELECT iso_a2, geom FROM countries WHERE iso_a2 NOT IN (SELECT iso_a2 FROM mundi)
+    UNION 
+    SELECT iso_a2, geom FROM mundi WHERE iso_a2!='-99' -- no ocean
+  ) SELECT ref_country, array_agg(neighbor) AS neighbor_list
+    FROM (
+	    SELECT DISTINCT m.iso_a2 AS ref_country, scan.iso_a2 AS neighbor
+	    FROM mundi_aug AS m INNER JOIN mundi_aug AS scan
+		 ON ST_dwithin(m.geom, scan.geom, 0.00001) -- SRID4326 degree metric
+	    WHERE m.iso_a2!=scan.iso_a2 -- not optimized, scans geom twice
+	    ORDER BY 1, 2
+    ) source
+    GROUP BY ref_country;
+```
+The *distance_of_srid* parameter of [ST_DWithin](http://postgis.net/docs/ST_DWithin.html) can range from 0.0000001 to 0.0001, so the country's neighbor topology is stable, and into a 100 or less meters error scale.
 
 ```shell
-# # # # # # #
-# get secondary mundi map, witn only all ~240 countries (237 rows)
-
-wget -c http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_admin_0_countries.zip
-shp2pgsql  -s 4326 ne_10m_admin_0_countries public.countries | psql -h localhost -U postgres sandbox
-
-http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_admin_0_countries.zip
-
 # # # # # # #
 # get main mundi map, witn only ~190 "country units"
 mkdir sandbox
@@ -59,33 +54,17 @@ wget -c http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/
 unzip ne_10m_admin_0_map_units.zip
 shp2pgsql  -s 4326 ne_10m_admin_0_map_units public.mundi | psql -h localhost -U postgres sandbox
 rm *.*
+# get secondary mundi map, witn all ~240 countries
 wget -c http://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_admin_0_countries.zip
 unzip ne_10m_admin_0_countries.zip
 shp2pgsql  -s 4326 ne_10m_admin_0_countries public.countries | psql -h localhost -U postgres sandbox
 rm *.*
 
-psql -h localhost -U postgres sandbox -c "
-  CREATE TABLE neighbors AS
-  WITH mundi_aug AS (
-    SELECT iso_a2, geom FROM countries WHERE iso_a2 NOT IN (SELECT iso_a2 FROM mundi)
-    UNION 
-    SELECT iso_a2, geom FROM countries WHERE iso_a2!='-99' -- no ocean
-  ) SELECT ref_country, array_agg(neighbor) AS neighbor_list
-    FROM (
-	    SELECT DISTINCT
-		m.iso_a2 AS ref_country, scan.iso_a2 AS neighbor
-	    FROM mundi_aug AS m INNER JOIN mundi_aug AS scan
-		 ON ST_dwithin(m.geom, scan.geom, 0.00001) -- SRID4326 degree metric
-	    WHERE m.iso_a2!=scan.iso_a2 -- not optimized, scans geom twice
-	    ORDER BY 1, 2
-    ) source
-    GROUP BY ref_country;
-"
+psql -h localhost -U postgres sandbox -c < createNeighbors.sql
 
 # make a report as COPY CSV or 
 psql -h localhost -U postgres sandbox -c "select *, array_length(neighbor_list,1) list_len from neighbors"
 ```
-The *distance_of_srid* parameter of [ST_DWithin](http://postgis.net/docs/ST_DWithin.html) can range from 0.0000001 to 0.0001, so the country's neighbor topology is stable, and into a 100 or less meters error scale.
 
 See more [details at report](https://github.com/ppKrauss/country-geotime/wiki/Country-neighbors,-preparation-report).
 
