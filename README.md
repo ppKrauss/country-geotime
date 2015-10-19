@@ -102,9 +102,34 @@ psql -h localhost -U postgres sandbox -c "SELECT *, array_length(utm_codes,1) AS
 Each country is under one or more cells of the UTM-grid, that is the main standard to describe contry territory in a local-planar projection. See [Utm-zones.jpg](https://upload.wikimedia.org/wikipedia/commons/e/ed/Utm-zones.jpg).
 
 ### Time references 
+For usual source, see ["Time zones" at baruch.cuny.edu](https://www.baruch.cuny.edu/confluence/display/geoportal/ESRI+International+Data).
+
 Each country have its standard official UTC hour fuses (column FUSES), corresponding to an official approximation to the exact UTC fuses tha cross the country area; and have an extetion to these fuses, the "legal time" (column `DST_legal`) corresponding to the....
 
 unicode_CLDR_tr35
+
+```sql
+CREATE VIEW mundi_time_lists AS
+  WITH mundi_aug AS (
+   SELECT iso_a2, geom FROM mundi WHERE iso_a2!='-99' -- no ocean
+   UNION
+   SELECT iso_a2, geom FROM countries WHERE iso_a2 NOT IN (SELECT iso_a2 FROM mundi)
+  ) SELECT  m.iso_a2, array_agg(t.zone) AS time_refs
+    FROM time_zones t INNER JOIN mundi_aug m 
+      ON (m.geom && t.geom AND st_intersects(m.geom,t.geom))
+    GROUP BY 1
+    ORDER BY 1
+  ;
+```
+```shell
+mkdir time_zones
+cd time_zones
+wget -c http://faculty.baruch.cuny.edu/geoportal/data/esri/world/timezone.zip
+unzip timezone.zip
+shp2pgsql  -s 4326 timezone public.time_zones | psql -h localhost -U postgres sandbox
+rm *.*
+psql -h localhost -U postgres sandbox -c "SELECT *, array_length(time_refs,1) AS list_len FROM mundi_time_lists"
+```
 
 ### Language 
 
