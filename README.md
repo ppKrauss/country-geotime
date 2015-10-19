@@ -71,7 +71,35 @@ See more [details at report](https://github.com/ppKrauss/country-geotime/wiki/Co
 About territoryContainment of CLDR-tr35 ...
 
 ###  UTM references
-Under construction. Each country is under one or more cells of the UTM-grid, that is the main standard to describe contry territory in a local-planar projection.
+You can check [`utm_zones.csv`](.data/utm_zones.csv) with [this online interface](http://earth-info.nga.mil/GandG/coordsys/grids/utm_1km_polyline_dloads.html). Antartica (AQ) was omited, check [this special definition](http://portal.uni-freiburg.de/AntSDI/standardsspecifications/refsystemandprojections/projections/utm.gif/image_view_fullscreen)
+
+Using `mundi` and `countries` of the [Country neighbors preparation](#Country neighbors), and the `utm_zones` of preparation below, the lists came from a direct quering on polygon intersections, 
+
+```sql
+CREATE VIEW mundi_utm_lists AS
+  WITH mundi_aug AS (
+   SELECT iso_a2, geom FROM mundi WHERE iso_a2!='-99' -- no ocean
+   UNION
+   SELECT iso_a2, geom FROM countries WHERE iso_a2 NOT IN (SELECT iso_a2 FROM mundi)
+  ) SELECT  m.iso_a2, array_agg(u.code) AS utm_codes
+    FROM utm_zones u INNER JOIN mundi_aug m 
+      ON (m.geom && u.geom AND st_intersects(m.geom,u.geom))
+    GROUP BY 1
+    ORDER BY 1
+  ;
+```
+them, using [enviroprojects.org/geospatial-services/gis-resources global-utm-zones](http://www.enviroprojects.org/geospatial-services/gis-resources/global-utm-zones/view) as source, the preparation is: 
+```shell
+mkdir utm_zones
+cd utm_zones
+wget -c http://www.enviroprojects.org/geospatial-services/gis-resources/global-utm-zones/at_download/file -O global-utm-zones.zip
+unzip global-utm-zones.zip
+shp2pgsql  -s 4326 utm_zones_final.dbf public.utm_zones | psql -h localhost -U postgres sandbox
+rm *.*
+psql -h localhost -U postgres sandbox -c "SELECT *, array_length(utm_codes,1) AS list_len FROM mundi_utm_lists"
+```
+
+Each country is under one or more cells of the UTM-grid, that is the main standard to describe contry territory in a local-planar projection. See [Utm-zones.jpg](https://upload.wikimedia.org/wikipedia/commons/e/ed/Utm-zones.jpg).
 
 ### Time references 
 Each country have its standard official UTC hour fuses (column FUSES), corresponding to an official approximation to the exact UTC fuses tha cross the country area; and have an extetion to these fuses, the "legal time" (column `DST_legal`) corresponding to the....
